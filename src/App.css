@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -9,4 +10,14 @@
 
 body {
   background-color: var(--background);
+}
+
+.home {
+  display: flex;
+  height: 20vh;
+}
+
+.books_wrapper {
+  margin: auto;
+  width: 80%;
 }
