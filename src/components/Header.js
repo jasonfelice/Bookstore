@@ -12,16 +12,17 @@ const Header = () => {
     {
       id: 2,
       path: '/categories',
-      name: 'Books',
+      name: 'Categories',
     },
   ];
   return (
     <>
       <header>
-        <div className={styles.logo} />
-        <nav>
-          <ul>
-            {
+        <div className={styles.header}>
+          <h1 className={styles.logo}>Bookstore</h1>
+          <nav>
+            <ul>
+              {
               links.map((link) => (
                 <li key={link.id}>
                   <Link to={link.path}>{link.name}</Link>
@@ -29,8 +30,9 @@ const Header = () => {
 
               ))
             }
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        </div>
       </header>
     </>
   );
