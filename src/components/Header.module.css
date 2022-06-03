@@ -1,0 +1,20 @@
+header {
+  padding: 1.8rem 6.25rem;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header a {
+  text-decoration: none;
+}
