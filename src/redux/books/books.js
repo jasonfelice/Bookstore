@@ -1,5 +1,5 @@
-const addBook = () => ({ type: 'ADD' });
-const removeBook = () => ({ type: 'REMOVE' });
+const addBook = (payload) => ({ type: 'ADD', payload });
+const removeBook = (payload) => ({ type: 'REMOVE', payload });
 const initialState = [];
 
 const updateBooks = (state = initialState, action) => {
