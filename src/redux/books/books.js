@@ -12,3 +12,4 @@ const updateBooks = (state = initialState, action) => {
 };
 
 export default updateBooks;
+export { addBook, removeBook };
