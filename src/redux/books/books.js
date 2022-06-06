@@ -1,6 +1,10 @@
 const addBook = (payload) => ({ type: 'ADD', payload });
 const removeBook = (payload) => ({ type: 'REMOVE', payload });
-const initialState = [];
+const initialState = [{
+  id: 1,
+  title: 'test',
+  author: 'test',
+}];
 
 const updateBooks = (state = initialState, action) => {
   switch (action.type) {

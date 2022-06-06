@@ -1,21 +1,28 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 import AddBook from '../components/AddBook';
 import Book from '../components/Book';
 
-const Books = () => (
-  <>
-    <Header />
-    <section className="home">
-      <div className="books_wrapper">
-        <Book
-          title="A Game of Thrones"
-          author="George R. R. Martin"
-        />
-      </div>
-      <AddBook />
-    </section>
-  </>
-);
+const Books = () => {
+  const books = useSelector((state) => state.updateBooks);
+  return (
+    <>
+      <Header />
+      <section className="home">
+        <div className="books_wrapper">
+          {books.map((book) => (
+            <Book
+              key={book.id}
+              title={book.title}
+              author={book.author}
+            />
+          ))}
+        </div>
+        <AddBook />
+      </section>
+    </>
+  );
+};
 
 export default Books;
