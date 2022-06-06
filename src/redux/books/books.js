@@ -5,7 +5,9 @@ const initialState = [];
 const updateBooks = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD':
-      return [...state];
+      return [...state, action.payload];
+    case 'REMOVE':
+      return state.filter((book) => book.id !== action.payload.id);
     default:
       return state;
   }
