@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
 const Book = () => {
+  const [data, setData] = useState({
+    title: '',
+    author: '',
+  });
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
+
   const dispatch = useDispatch();
 
   return (
@@ -15,8 +27,8 @@ const Book = () => {
         }}
         action="#"
       >
-        <input type="text" name="title" />
-        <input type="text" name="author" />
+        <input value={data.title} onChange={onChange} type="text" name="title" />
+        <input value={data.author} onChange={onChange} type="text" name="author" />
         <input type="submit" value="Add Book" />
       </form>
     </div>
