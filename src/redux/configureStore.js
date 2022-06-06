@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
 import addRemove from './books/books';
 import categories from './categories/categories';
 
@@ -7,6 +7,6 @@ const rootReducer = combineReducers({
   categories,
 });
 
-const store = createStore(rootReducer);
-
-export default store;
+export default createStore(
+  (state, action) => rootReducer(state, action),
+);
