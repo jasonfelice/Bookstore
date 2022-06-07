@@ -1,13 +1,18 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { checkStatus } from '../redux/categories/categories';
 import Header from '../components/Header';
 
-const NoPage = () => (
-  <>
-    <Header />
-    <section className="home">
-      <button type="button">Check status</button>
-    </section>
-  </>
-);
+const NoPage = () => {
+  const dispatch = useDispatch();
+  return (
+    <>
+      <Header />
+      <section className="home">
+        <button onClick={() => dispatch(checkStatus())} type="button">Check status</button>
+      </section>
+    </>
+  );
+};
 
 export default NoPage;
