@@ -7,6 +7,7 @@ const Book = () => {
   const [data, setData] = useState({
     title: '',
     author: '',
+    category: '',
   });
   const onChange = (e) => {
     const { name, value } = e.target;
