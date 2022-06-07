@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 const Book = () => {
@@ -23,7 +24,9 @@ const Book = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          dispatch(addBook());
+          if (data.title.trim() && data.title.trim()) {
+            dispatch(addBook({ ...data, id: uuid() }));
+          }
         }}
         action="#"
       >
