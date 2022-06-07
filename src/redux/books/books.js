@@ -1,5 +1,5 @@
 const addBook = (payload) => ({ type: 'ADD', payload });
-const removeBook = (payload) => ({ type: 'REMOVE', payload });
+const removeBook = (id) => ({ type: 'REMOVE', id });
 const initialState = [{
   id: 1,
   title: 'test',
@@ -11,7 +11,7 @@ const updateBooks = (state = initialState, action) => {
     case 'ADD':
       return [...state, action.payload];
     case 'REMOVE':
-      return state.filter((book) => book.id !== action.payload.id);
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
