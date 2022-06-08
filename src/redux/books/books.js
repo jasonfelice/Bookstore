@@ -1,6 +1,20 @@
+import axios from 'axios';
+
 const addBook = (payload) => ({ type: 'ADD', payload });
 const removeBook = (id) => ({ type: 'REMOVE', id });
+const getBooks = (payload) => ({ type: 'GET_BOOKS', payload });
 const initialState = [];
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/yUzxVpO3xgGUOTpWEsIb/books';
+
+const fetchBooks = () => async (dispatch) => {
+  const res = await axios.get(url);
+  const keys = Object.keys(res.data);
+  const books = [];
+  keys.forEach((key) => {
+    books.push({ id: key, ...res.data[key][0] });
+  });
+  dispatch(getBooks(books));
+};
 
 const updateBooks = (state = initialState, action) => {
   switch (action.type) {
@@ -8,10 +22,12 @@ const updateBooks = (state = initialState, action) => {
       return [...state, action.payload];
     case 'REMOVE':
       return state.filter((book) => book.id !== action.id);
+    case 'GET_BOOKS':
+      return action.payload;
     default:
       return state;
   }
 };
 
 export default updateBooks;
-export { addBook, removeBook };
+export { addBook, removeBook, fetchBooks };
