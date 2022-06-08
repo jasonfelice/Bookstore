@@ -1,11 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Header from '../components/Header';
 import AddBook from '../components/AddBook';
 import Book from '../components/Book';
+import { fetchBooks } from '../redux/books/books';
 
 const Books = () => {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.updateBooks);
+
+  window.onload = () => {
+    dispatch(fetchBooks());
+  };
+
   return (
     <>
       <Header />

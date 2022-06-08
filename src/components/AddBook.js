@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 
 const Book = () => {
   const [data, setData] = useState({
     title: '',
     author: '',
+    category: '',
   });
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +26,12 @@ const Book = () => {
         onSubmit={(e) => {
           e.preventDefault();
           if (data.title.trim() && data.title.trim()) {
-            dispatch(addBook({ ...data, id: uuid() }));
+            dispatch(postBook({ ...data, id: uuid() }));
+            setData({
+              title: '',
+              author: '',
+              category: '',
+            });
           }
         }}
         action="#"
