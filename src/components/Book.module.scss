@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$offWhite: #e8e8e8;
+$black: #121212;
+$coolblue: #4386bf;
+
+.book_wrapper {
+  background-color: #fff;
+  padding: 1.7rem;
+  border-radius: 4px;
+  border: 1px solid $offWhite;
+}
+
+.content,
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_wrapper {
+  gap: 1.3rem;
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $black;
+}
+
+.author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9rem;
+  color: $coolblue;
+}

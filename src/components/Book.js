@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import styles from './Book.module.css';
+import styles from './Book.module.scss';
 import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
@@ -23,7 +23,6 @@ const Book = (props) => {
             >
               Remove
             </button>
-            <button type="button">Edit</button>
           </div>
         </div>
       </div>
