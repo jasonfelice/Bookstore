@@ -27,6 +27,11 @@ const Book = () => {
           e.preventDefault();
           if (data.title.trim() && data.title.trim()) {
             dispatch(postBook({ ...data, id: uuid() }));
+            setData({
+              title: '',
+              author: '',
+              category: '',
+            });
           }
         }}
         action="#"
