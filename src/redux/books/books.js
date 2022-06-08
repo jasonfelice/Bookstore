@@ -16,6 +16,12 @@ const fetchBooks = () => async (dispatch) => {
   dispatch(getBooks(books));
 };
 
+const deleteBook = (id) => async (dispatch) => {
+  await axios.delete(`${url}/${id}`)
+    .then(() => dispatch(removeBook(id)))
+    .catch((error) => { throw new Error(error); });
+};
+
 const updateBooks = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD':
@@ -30,4 +36,6 @@ const updateBooks = (state = initialState, action) => {
 };
 
 export default updateBooks;
-export { addBook, removeBook, fetchBooks };
+export {
+  addBook, removeBook, fetchBooks, deleteBook,
+};
