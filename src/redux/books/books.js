@@ -22,6 +22,12 @@ const deleteBook = (id) => async (dispatch) => {
     .catch((error) => { throw new Error(error); });
 };
 
+const postBook = (payload) => async (dispatch) => {
+  await axios.post(url, { ...payload, item_id: payload.id })
+    .then(() => dispatch(addBook(payload)))
+    .catch((error) => { throw new Error(error); });
+};
+
 const updateBooks = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD':
@@ -37,5 +43,5 @@ const updateBooks = (state = initialState, action) => {
 
 export default updateBooks;
 export {
-  addBook, removeBook, fetchBooks, deleteBook,
+  fetchBooks, deleteBook, postBook,
 };
