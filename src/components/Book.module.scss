@@ -35,6 +35,11 @@ $coolblue: #4386bf;
   color: $coolblue;
 }
 
+.actions {
+  display: flex;
+  gap: 1%;
+}
+
 .button {
   border: none;
   background: transparent;

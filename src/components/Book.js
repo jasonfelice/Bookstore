@@ -24,6 +24,8 @@ const Book = (props) => {
             >
               Remove
             </button>
+            <button type="button" className={styles.button}>Edit</button>
+            <button type="button" className={styles.button}>Comment</button>
           </div>
         </div>
       </div>
