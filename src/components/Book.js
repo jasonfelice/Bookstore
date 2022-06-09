@@ -18,6 +18,7 @@ const Book = (props) => {
           </div>
           <div className={styles.actions}>
             <button
+              className={styles.button}
               type="button"
               onClick={() => dispatch(deleteBook(id))}
             >
