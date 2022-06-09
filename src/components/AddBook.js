@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { postBook } from '../redux/books/books';
+import styles from './AddBook.module.scss';
 
 const Book = () => {
   const [data, setData] = useState({
@@ -20,7 +21,7 @@ const Book = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="add_book">
+    <div className={styles.add_book}>
       <h3>Add New Book</h3>
       <form
         onSubmit={(e) => {
@@ -36,8 +37,8 @@ const Book = () => {
         }}
         action="#"
       >
-        <input value={data.title} onChange={onChange} type="text" name="title" />
-        <input value={data.author} onChange={onChange} type="text" name="author" />
+        <input className={styles.title} placeholder="Book title" value={data.title} onChange={onChange} type="text" name="title" />
+        <input placeholder="Book author" value={data.author} onChange={onChange} type="text" name="author" />
         <input type="submit" value="Add Book" />
       </form>
     </div>
