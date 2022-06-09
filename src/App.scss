@@ -1,26 +1,27 @@
+$whiteTwo: #e8e8e8;
+$background: #fafafa;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --background: #fafafa;
-}
-
 body {
-  background-color: var(--background);
+  background-color: $background;
 }
 
 .home {
   display: flex;
   flex-direction: column;
-  padding: 2.3rem;
+  gap: 1.8rem;
 }
 
 .books_wrapper {
   margin: auto;
   width: 80%;
+  padding: 2.3rem 0;
+  border-bottom: 1px solid $whiteTwo;
   display: flex;
   flex-direction: column;
   gap: 1rem;
