@@ -28,6 +28,16 @@ const Book = (props) => {
             <button type="button" className={styles.button}>Comment</button>
           </div>
         </div>
+        <div className={styles.info}>
+          <div className={styles.progress_info}>
+            <i className={styles.circle} />
+            <div className={styles.progress}>
+              <span>64%</span>
+              <span>Completed</span>
+            </div>
+          </div>
+          <div className={styles.chapter} />
+        </div>
       </div>
     </>
   );
