@@ -36,7 +36,13 @@ const Book = (props) => {
               <span>Completed</span>
             </div>
           </div>
-          <div className={styles.chapter} />
+          <div className={styles.chapter_info}>
+            <div className={styles.chapter}>
+              <span>Current Chapter</span>
+              <span>Chapter 10</span>
+            </div>
+            <button className="button" type="button">Update progress</button>
+          </div>
         </div>
       </div>
     </>

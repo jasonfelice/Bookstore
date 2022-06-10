@@ -49,6 +49,10 @@ $coolblue: #4386bf;
   color: $coolblue;
 }
 
+.info {
+  display: flex;
+}
+
 .progress_info {
   display: flex;
   align-items: center;
@@ -75,4 +79,33 @@ $coolblue: #4386bf;
   display: block;
   height: 100px;
   width: 85px;
+}
+
+.chapter_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  button {
+    color: $offWhite;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  span {
+    font-family: 'Roboto Slab', serif;
+    color: $black;
+  }
+
+  span:nth-child(1) {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 50%;
+  }
 }
