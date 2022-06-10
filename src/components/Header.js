@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 const Header = () => {
   const links = [
@@ -19,7 +19,7 @@ const Header = () => {
     <>
       <header>
         <div className={styles.header}>
-          <h1 className={styles.logo}>Bookstore</h1>
+          <a href="/#" className={styles.logo}>Bookstore</a>
           <nav>
             <ul>
               {

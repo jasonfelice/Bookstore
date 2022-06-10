@@ -9,7 +9,7 @@ const NoPage = () => {
     <>
       <Header />
       <section className="home">
-        <button onClick={() => dispatch(checkStatus())} type="button">Check status</button>
+        <button className="button" onClick={() => dispatch(checkStatus())} type="button">Check status</button>
       </section>
     </>
   );

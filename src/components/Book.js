@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import styles from './Book.module.css';
+import styles from './Book.module.scss';
 import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
@@ -18,12 +18,31 @@ const Book = (props) => {
           </div>
           <div className={styles.actions}>
             <button
+              className={styles.button}
               type="button"
               onClick={() => dispatch(deleteBook(id))}
             >
               Remove
             </button>
-            <button type="button">Edit</button>
+            <button type="button" className={styles.button}>Edit</button>
+            <button type="button" className={styles.button}>Comment</button>
+          </div>
+        </div>
+        <div className={styles.info}>
+          <div className={styles.progress_info}>
+            <i className={styles.circle} />
+            <div className={styles.progress}>
+              <span>64%</span>
+              <span>Completed</span>
+            </div>
+          </div>
+          <hr />
+          <div className={styles.chapter_info}>
+            <div className={styles.chapter}>
+              <span>Current Chapter</span>
+              <span>Chapter 10</span>
+            </div>
+            <button className="button" type="button">Update progress</button>
           </div>
         </div>
       </div>

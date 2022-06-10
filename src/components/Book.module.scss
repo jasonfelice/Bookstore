@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$offWhite: #e8e8e8;
+$black: #121212;
+$coolblue: #4386bf;
+
+.book_wrapper {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid $offWhite;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content,
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_wrapper {
+  gap: 1.3rem;
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $black;
+}
+
+.author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9rem;
+  color: $coolblue;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: $coolblue;
+}
+
+.info {
+  display: flex;
+  gap: 5.75rem;
+  padding-right: 10%;
+}
+
+.progress_info {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  span {
+    font-family: 'Roboto Slab', serif;
+    color: $black;
+  }
+
+  span:nth-child(1) {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 50%;
+  }
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span:nth-child(1) {
+    font-size: 2rem;
+    color: $black;
+  }
+
+  span:nth-child(2) {
+    opacity: 50%;
+  }
+}
+
+.circle {
+  background: url(../assets/progress.png) no-repeat center center/cover;
+  display: block;
+  height: 100px;
+  width: 85px;
+}
+
+hr {
+  opacity: 50%;
+  border-radius: 10px;
+}
+
+.chapter_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  button {
+    color: $offWhite;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.43rem 1.4rem;
+  }
+}
