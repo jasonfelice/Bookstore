@@ -61,6 +61,23 @@ $coolblue: #4386bf;
   gap: 0.7rem;
 }
 
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  span {
+    font-family: 'Roboto Slab', serif;
+    color: $black;
+  }
+
+  span:nth-child(1) {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 50%;
+  }
+}
+
 .progress {
   display: flex;
   flex-direction: column;
@@ -98,22 +115,5 @@ hr {
     text-transform: uppercase;
     text-align: center;
     padding: 0.43rem 1.4rem;
-  }
-}
-
-.chapter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-
-  span {
-    font-family: 'Roboto Slab', serif;
-    color: $black;
-  }
-
-  span:nth-child(1) {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    opacity: 50%;
   }
 }
