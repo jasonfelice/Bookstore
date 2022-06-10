@@ -7,7 +7,7 @@ $coolblue: #4386bf;
 
 .book_wrapper {
   background-color: #fff;
-  padding: 1.7rem;
+  padding: 2rem;
   border-radius: 4px;
   border: 1px solid $offWhite;
   display: flex;
@@ -51,6 +51,8 @@ $coolblue: #4386bf;
 
 .info {
   display: flex;
+  gap: 5.75rem;
+  padding-right: 10%;
 }
 
 .progress_info {
@@ -81,6 +83,11 @@ $coolblue: #4386bf;
   width: 85px;
 }
 
+hr {
+  opacity: 50%;
+  border-radius: 10px;
+}
+
 .chapter_info {
   display: flex;
   flex-direction: column;
@@ -90,6 +97,7 @@ $coolblue: #4386bf;
     color: $offWhite;
     text-transform: uppercase;
     text-align: center;
+    padding: 0.43rem 1.4rem;
   }
 }
 

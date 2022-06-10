@@ -36,6 +36,7 @@ const Book = (props) => {
               <span>Completed</span>
             </div>
           </div>
+          <hr />
           <div className={styles.chapter_info}>
             <div className={styles.chapter}>
               <span>Current Chapter</span>
