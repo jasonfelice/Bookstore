@@ -1,4 +1,5 @@
 # Project - Bookstore
+<p align="center"><img src="./preview/laptop.png"></p>
 
 ## Built With
 
@@ -8,7 +9,9 @@
 - webpack
 - React
 
-## Live Demo (Comming Soon)
+## Live
+[Preview](https://deft-babka-260201.netlify.app/)
+
 
 ## Install
 
