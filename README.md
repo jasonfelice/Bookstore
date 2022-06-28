@@ -9,7 +9,7 @@
 - webpack
 - React
 
-## Live
+## Live Demo
 [Preview](https://deft-babka-260201.netlify.app/)
 
 
