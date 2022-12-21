@@ -1,6 +1,8 @@
 # Project - Bookstore
 <p align="center"><img src="./preview/laptop.png"></p>
 
+> Users enter a title and the author of the book in the form, and it is stored in the API. When the application loads, it fetches everything from the API and displays all the books on the home page.
+
 ## Built With
 
 - HTML
