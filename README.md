@@ -8,7 +8,7 @@
 - HTML
 - CSS
 - JavaScript
-- webpack
+- Webpack
 - React
 
 ## Live Demo
